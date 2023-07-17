@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./CSS/Gestion eliminar empleado.css">
+    <link rel="icon" href="/ImagenesPrincipales/logo.png">
+    <title>Eliminar empleado</title>
+</head>
+<body>
+    
+    <header>
+        <div class="vaqui">
+            <a href="/Administrador/Login.html">Vaqui</a>
+        </div>
+        <div class="header-serch">
+            <input type="search" id="search-input" class="header-input" placeholder="Busca por ID">
+            <div class="icone">
+                <!-- <img src="/Adminstrador/assets/lupaForm.svg" alt="icono lupa buscar"> -->
+                <button id="search-button">Buscar</button>
+            </div>
+        </div>
+    </header>
+    <hr>
+
+    <section class="categoria" id="categoria">
+        <div class="categoria__text">
+            <h2 class="categoria__title">Eliminar empleado</h2>
+            <p class="categoria__paragraph">Our aim is to make it quick and easy for you to access your favourite websites. 
+              Your bookmarks sync between your devices so you can access them on the go.</p>
+              <hr>
+        </div>
+        
+        <div class="container">        
+            <table id="tabla">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Telefono</th>
+                  <th>Correo</th>
+                  <th>Contraseña</th>
+                  <th>Rol</th>
+                  <th>Area</th>
+                  <th>Accion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Aquí se añadirán las filas de datos con JavaScript -->
+              </tbody>
+            </table>
+        
+          </div>
+
+    </section>
+
+
+    <script src="./JS/eliminarEmpleado.js"></script>
+</body>
+</html>

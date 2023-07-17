@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/LandingPage.css">
+    <link rel="icon" href="/ImagenesPrincipales/logo.png">
+
+        <!-- cloudflareFooter -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- cloudflareFooter -->
+    
+    <title>Vaqui | Empleado</title>
+</head>
+<body>
+
+    <header id="inicio">
+        <nav>
+            <div class="vaqui">
+                <img src="/ImagenesPrincipales/logo.png" class="nav__logo" alt="logo de la empresa">
+                <!-- <h2>VAQUI</h2> -->
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            </div>
+            <ul class="menu" id="menu">
+                <!-- <li><a href="#categoria">CATEGORIA</a></li> -->
+                <li><a href="#gestion">GESTION</a></li>
+                <li><a href="/CRUD/Tabla General/index.html">BUSCAR</a></li>
+                <li><a class="perfil" href="">PERFIL</a></li>
+            </ul>
+        </nav>  
+        <div class="header__slogan">
+            <h1>Cambiando información <br> En éxito <span> Ganadero</span></h1>
+            <p>Brindando a nuestros clientes las herramientas necesarias para optimizar <br> 
+              su finca y maximizar el rendimiento de su ganado. </p>
+            <a href="/Adminstrador/Login.html">CERRAR SESION</a>
+        </div>
+        <div class="header__slogan__images">
+            <img class="shape" src="/ImagenesPrincipales/shapeNav.jpg" alt="ilustracion fonde vaca">
+            <img class="cow" src="/ImagenesPrincipales/VacaLogo.png" alt="fonde vaca">
+
+        </div>
+    </header>
+
+    <!-- <section class="detalles">
+      <div class="items">
+        <img src="/ImagenesVacas/primerDetalle.png" alt="">
+        <h2>Titulo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, maxime.</p>
+      </div>
+      <div class="items">
+        <img src="/ImagenesVacas/primerDetalle.png" alt="">
+        <h2>Titulo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, maxime.</p>
+      </div>
+      <div class="items">
+        <img src="/ImagenesVacas/primerDetalle.png" alt="">
+        <h2>Titulo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, maxime.</p>
+      </div>
+    </section> -->
+
+      <div class="gestion" id="gestion">
+        <div class="gestion__text">
+            <h2 class="gestion__title">Gestion</h2>
+            <p class="gestion__paragraph">Simplificamos el proceso para que puedas mantener tu base de datos actualizada 
+              y acceder a la información que necesitas en todo momento.</p>
+              <hr>
+        </div>
+      <div class="gestion__container-card">
+        <div class="card">
+          <figure>
+            <img src="/ImagenesVacas/VacasGestion1.jpg" alt="imgagen añadir a un empleado">
+          </figure>
+          <div class="contenido-card">
+            <h3>Añadir Bovino</h3>
+            <p>Aca puedes ingresar los datos relevantes de un nuevo bovino a tu base de datos, esto te permitirá mantener un 
+              registro detallado y ordenado de tu ganado, facilitando la toma de decisiones informadas.</p>
+            <a href="./AñadirBovino.html">Ir</a>
+          </div>
+        </div>
+        <div class="card">
+          <figure>
+            <img src="/ImagenesVacas/VacasGestion3.jpg" alt="imagen buscar empleado">
+          </figure>
+          <div class="contenido-card">
+            <h3>Gestionar</h3>
+            <p>Aca podrás acceder a las diferentes categorías y realizar operaciones de eliminación, búsqueda y 
+              actualización de datos en cada una de ellas. Simplifica tus tareas de gestión y mantén un control completo 
+              sobre la información de tus bovinos en un solo lugar.</p>
+            <a href="./Gestionar.html">Ir</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- <div class="gestion__container-card">
+        <div class="card">
+          <figure>
+            <img src="/ImagenesVacas/VacasGestion2.jpg" alt="imagen actualizar la informacion del empleado">
+          </figure>
+          <div class="contenido-card">
+            <h3>Actualizar Bovino</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, nobis reprehenderit. Reiciendis facilis perspiciatis cumque quia atque quasi expedita repellat dolor labore corrupti cupiditate possimus voluptatem architecto qui, dolore hic!</p>
+            <a href="/Adminstrador/Gestion actualizar empleado.html">Ir</a>
+          </div>
+        </div>
+        <div class="card">
+          <figure>
+            <img src="/ImagenesVacas/VacasGestion4.jpg" alt="imagen eliminar empleado">
+          </figure>
+          <div class="contenido-card">
+            <h3>Eliminar Bovino</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero dicta sunt minus earum ea illo velit. Accusamus dolorem assumenda dignissimos similique at. Quibusdam sint illo, sit illum reprehenderit expedita perspiciatis?</p>
+            <a href="/Adminstrador/Gestion eliminar empleado.html">Ir</a>
+          </div>
+        </div>
+      </div> -->
+  </div>
+
+  <footer>
+    <div class="footer__contenedor">
+      <div class="sobre-mi">
+        <h2 class="titulos-footer">Quienes somos</h2>
+        <p>Somos un equipo apasionado dedicado a impulsar el éxito en la 
+          cría bovina. Nuestro compromiso es brindar soluciones innovadoras y 
+          servicios de calidad para optimizar la gestión ganadera. Confía en 
+          nosotros para potenciar tu negocio y alcanzar tus metas en la industria bovina.</p>
+          <ul class="redes-sociales">
+            <li> <a href="https://www.facebook.com/david.mesa.399488/"> <i class="fa-brands
+            fa-facebook"></i></a></li>
+            <li> <a href="https://www.youtube.com/@davidmesa532/featured"> <i class="fa-brands
+            fa-youtube"></i></a></li>
+            <li> <a href="https://www.instagram.com/_mesiin_/"> <i class="fa-brands
+            fa-instagram"></i></a></li>
+            <li> <a href="https://www.tiktok.com/@davidmesa10?lang=es"> <i class="fa-brands
+            fa-tiktok"></i></a></li>
+          </ul>
+      </div>
+
+      <div class="footer__navegacion">
+        <h2 class="titulos-footer">Menu de navegacion</h2>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#gestion">Gestion</a></li>
+          <li><a href="" target="_blank">Buscar</a></li>
+          <li><a href="#">Perfil</a></li>
+        </ul>
+      </div>
+
+
+      <div class="contactanos">
+        <h2 class="titulos-footer">Contactanos</h2>
+        <ul class="informacion-contacto">
+          <li>
+            <span><i class="fa-solid fa-location-dot"></i></span>
+            <p>Direccion: Cl. 17, Mosquera, Cundinamarca</p>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-phone"></i></span>
+            <p>+57 3108766416 <br> +57 3007417776 </p>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-envelope"></i></span>
+            <p>sipuedesimaginarlospuedesprogramarlo@miseñorita.com</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      &copy; Si puedes imaginarlo, puedes programarlo.
+    </div>
+</footer>
+
+    <script src="/Adminstrador/JS/slider.js"></script>
+</body>
+</html>
