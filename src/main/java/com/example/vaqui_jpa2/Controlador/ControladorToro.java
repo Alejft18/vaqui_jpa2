@@ -26,13 +26,19 @@ public class ControladorToro {
 
     @GetMapping("/listarToros")
     public ResponseEntity<String> listarToros(){
-        JSONArray jsonArray = servicio.listarToros();
-        String json= jsonArray.toString();
+        try {
+            JSONArray jsonArray = servicio.listarToros();
+            String json = jsonArray.toString();
 
-        return ResponseEntity.status(HttpStatus.OK)
-                .contentType(MediaType.APPLICATION_JSON)
-                .body(json);
-
+            return ResponseEntity.status(HttpStatus.OK)
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .body(json);
+        } catch (Exception e) {
+            // Aquí puedes manejar la excepción y devolver una respuesta apropiada, por ejemplo:
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .body("{\"error\": \"Error interno en el servidor\"}");
+        }
     }
 
     @PostMapping("/agregarToro/{id}")
