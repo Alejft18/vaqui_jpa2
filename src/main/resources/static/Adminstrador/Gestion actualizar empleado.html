@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./CSS/Buscar empleado.css">
+    <link rel="icon" href="/ImagenesPrincipales/logo.png">
+    <title>Actualizar empleado</title>
+
+    <style>
+  .btn-actualizar {
+    text-decoration: none;
+    color: #000;
+    padding: 6px 14px;
+    background-color: #1A73E8;
+    color: #fff;
+    border-radius: 5px;
+  }
+
+  .btn-actualizar:hover {
+    background-color: #1f6dd3;
+  }
+</style>
+
+</head>
+<body>
+    
+    <header>
+        <div class="vaqui">
+            <a href="/Adminstrador/Login.html">Vaqui</a>
+        </div>
+        <div class="header-serch">
+            <input type="search" id="search-input" class="header-input" placeholder="Busca por ID">
+            <div class="icone">
+                <!-- <img src="/Adminstrador/assets/lupaForm.svg" alt="icono lupa buscar"> -->
+                <button id="search-button">Buscar</button>
+            </div>
+        </div>
+    </header>
+    <hr>
+
+    <section class="categoria" id="categoria">
+        <div class="categoria__text">
+            <h2 class="categoria__title">Actualizar empleado</h2>
+            <p class="categoria__paragraph">En esta sección, te ofrecemos la posibilidad de mantener tu información
+                actualizada de manera sencilla y conveniente. Con un formulario intuitivo, podrás modificar cualquier
+                dato personal, número de teléfono, correo o preferencias de contacto.</p>
+              <hr>
+        </div>
+        
+        <div class="container">        
+            <table id="tabla">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Telefono</th>
+                  <th>Correo</th>
+                  <th>Contraseña</th>
+                  <th>Rol</th>
+                  <th>Area</th>
+                  <th>Accion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Aquí se añadirán las filas de datos con JavaScript -->
+              </tbody>
+            </table>
+        
+          </div>
+
+    </section>
+
+
+    <script src="./JS/actualizarEmpleado.js"></script>
+</body>
+</html>

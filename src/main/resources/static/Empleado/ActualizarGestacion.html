@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./CSS/AñadirLechera.css">
+    <link rel="icon" href="/ImagenesPrincipales/logo.png">
+    <title>Actualizar Gestacion</title>
+</head>
+<body>
+
+<header>
+    <div class="vaqui">
+        <a href="/Administrador/Login.html">Gestacion</a>
+    </div>
+</header>
+<hr>
+
+<div class="principal">
+    <img src="/ImagenesVacas/Bovino2.jpg" alt="imagen ilustrativa a una vaca">
+
+    <form action="form">
+        <h2 class="form-title">Ingrese los datos modificados del bovino</h2>
+
+        <div class="form-group">
+            <input type="number" id="id" class="form-input" placeholder=" ">
+            <label for="id" class="form-label">Id Bovino</label>
+            <span class="form-line"></span>
+        </div>
+
+        <div class="form-container">
+            <div class="form-group">
+                <input type="number" id="peso" class="form-input" placeholder=" ">
+                <label for="peso" class="form-label">Peso(En kilos)</label>
+                <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="date" id="inseminacion" class="form-input" placeholder=" ">
+                <label for="inseminacion" class="form-label">Fecha de inseminacion</label>
+                <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="date" id="aproxParto" class="form-input" placeholder=" ">
+                <label for="aproxParto" class="form-label">Fecha aproxParto</label>
+                <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="date" id="fecha_ult_parto" class="form-input" placeholder=" ">
+                <label for="fecha_ult_parto" class="form-label">Fecha ultimo parto</label>
+                <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="date" id="fecha_reivision" class="form-input" placeholder=" ">
+                <label for="fecha_reivision" class="form-label">Fecha de reivision</label>
+                <span class="form-line"></span>
+            </div>
+
+            <button id="actualizarGestacion" type="button">Registrar</button>
+        </div>
+
+    </form>
+</div>
+
+<script>
+
+$("#actualizarGestacion").on('click', function() {
+    categoria = "gestacion";
+    let datos = {
+        id: $('#id').val(),
+        peso_kilos: $('#peso').val(),
+        fecha_inseminacion: $('#inseminacion').val(),
+        fecha_aproxParto: $('#aproxParto').val(),
+        fecha_ultimoParto: $('#fecha_ult_parto').val(),
+        fecha_revision: $('#fecha_reivision').val(),
+        categoria: categoria
+    };
+
+    console.log(datos);
+    let datosEnvio = JSON.stringify(datos);
+    console.log(datosEnvio);
+
+    $.ajax({
+        url: "http://localhost:8080/actualizarGestacion/" + $('#id').val(),
+        type: "PUT",
+        data: datosEnvio,
+        contentType: "application/json",
+        dataType: "text",
+        success: function(resultado) {
+            try {
+                let resultadoJSON = JSON.parse(resultado);
+                alert("Resultado de la API: " + resultadoJSON);
+            } catch (error) {
+                alert("Mensaje satisfactorio: " + resultado);
+                window.location.href = "./LandingPage.html";
+            }
+        },
+        error: function(xhr, status, error) {
+            alert("Error al llamar a la API: " + error);
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>

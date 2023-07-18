@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./CSS/AñadirLechera.css">
+    <link rel="icon" href="/ImagenesPrincipales/logo.png">
+    <title>Actualizar Secado</title>
+</head>
+<body>
+
+<header>
+    <div class="vaqui">
+        <a href="/Administrador/Login.html">Secado</a>
+    </div>
+</header>
+<hr>
+
+<div class="principal">
+    <img src="/ImagenesVacas/Bovino2.jpg" alt="imagen ilustrativa a una vaca">
+
+    <form action="form">
+        <h2 class="form-title">Ingrese los datos modificados del bovino</h2>
+        <div class="form-container">
+
+            <div class="form-group">
+                <input type="number" id="id" class="form-input" placeholder=" ">
+                <label for="id" class="form-label">Id Bovino</label>
+                <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="date" id="ult_parto" class="form-input" placeholder=" ">
+                <label for="ult_parto" class="form-label">Fecha ultimo parto</label>
+                <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="number" id="peso" class="form-input" placeholder=" ">
+                <label for="peso" class="form-label">Peso(En kilos)</label>
+                <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="date" id="revision" class="form-input" placeholder=" ">
+                <label for="revision" class="form-label">Fecha de revision</label>
+                <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="date" id="fecha_ordeño" class="form-input" placeholder=" ">
+                <label for="fecha_ordeño" class="form-label">Fecha de ordeño</label>
+                <span class="form-line"></span>
+            </div>
+
+            <button id="actualizarSecado" type="button">Registrar</button>
+        </div>
+
+    </form>
+</div>
+
+<script>
+
+    $("#actualizarSecado").on('click', function() {
+    categoria = "secado";
+    let datos = {
+        id: $('#id').val(),
+        fecha_ultimo_parto: $('#ult_parto').val(),
+        peso_kilos: $('#peso').val(),
+        fecha_revision: $('#revision').val(),
+        fecha_ordeno: $('#fecha_ordeño').val(),
+        categoria: categoria
+    };
+
+    console.log(datos);
+    let datosEnvio = JSON.stringify(datos);
+    console.log(datosEnvio);
+
+    $.ajax({
+        url: "http://localhost:8080/actualizarSecado/" + $('#id').val(),
+        type: "PUT",
+        data: datosEnvio,
+        contentType: "application/json",
+        dataType: "text",
+        success: function(resultado) {
+            try {
+                let resultadoJSON = JSON.parse(resultado);
+                alert("Resultado de la API: " + resultadoJSON);
+            } catch (error) {
+                alert("Mensaje satisfactorio: " + resultado);
+                window.location.href = "./LandingPage.html";
+            }
+        },
+        error: function(xhr, status, error) {
+            alert("Error al llamar a la API: " + error);
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>

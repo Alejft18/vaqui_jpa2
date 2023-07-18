@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/Gestion ingresar empleado.css">
+    <link rel="icon" href="/ImagenesPrincipales/logo.png">
+    <title>Actualizar Empleado</title>
+</head>
+<body>
+
+<header>
+    <div class="vaqui">
+        <a href="/Administrador/Login.html">Vaqui</a>
+    </div>
+</header>
+<hr>
+
+
+<div class="principal">
+    <img src="/ImagenesEmpleados/actualizarEmpleado.svg" alt="añadir empleado">
+
+    <form id="updateForm">
+        <h2 class="form-title">Ingrese los datos modificados del empleado</h2>
+        <div class="form-container">
+            <div class="form-group">
+                <input type="text" id="id" name="id" required class="form-input" placeholder=" ">
+                <label for="id" class="form-label">Numero de documento</label>
+                <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="nombre" name="nombre" required class="form-input" placeholder=" ">
+                <label for="nombre" class="form-label">Nombre</label>
+                <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="apellido" name="apellido" required class="form-input" placeholder=" ">
+                <label for="apellido" class="form-label">Apellido</label>
+                <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="telefono" name="telefono" required class="form-input" placeholder=" ">
+                <label for="telefono" class="form-label">Numero de telefono</label>
+                <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="correo" name="correo" required class="form-input" placeholder=" ">
+                <label for="correo" class="form-label">Correo</label>
+                <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="password" id="contrasena" name="contrasena" required class="form-input" placeholder=" ">
+                <label for="contrasena" class="form-label">Contraseña</label>
+                <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="rol" name="rol" class="form-input" required placeholder=" ">
+                <label for="rol" class="form-label">Rol del empleado</label>
+                <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="area" name="area" class="form-input" placeholder=" ">
+                <label for="area" class="form-label">Area</label>
+                <span class="form-line"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="imagen" name="imagen" class="form-input" placeholder=" ">
+                <label for="imagen" class="form-label">Imagen</label>
+                <span class="form-line"></span>
+            </div>
+
+            <button type="button" onclick="actualizarUsuario()">Actualizar</button>
+
+        </div>
+    </form>
+</div>
+
+
+<script>
+        function actualizarUsuario() {
+            const usuario = {
+                id: document.getElementById('id').value,
+                nombre: document.getElementById('nombre').value,
+                apellido: document.getElementById('apellido').value,
+                telefono: document.getElementById('telefono').value,
+                correo: document.getElementById('correo').value,
+                contrasena: document.getElementById('contrasena').value,
+                rol: document.getElementById('rol').value,
+                area: document.getElementById('area').value,
+                imagen: document.getElementById('imagen').value,
+            };
+
+            // Realizar la llamada AJAX para actualizar el usuario
+            fetch('http://localhost:8080/actualizarUsuario', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(usuario),
+            })
+            .then(response => response.text())
+            .then(mensaje => {
+                alert(mensaje);
+                window.location.href = '/Adminstrador/LandingPage.html';
+            })
+            .catch(error => {
+                console.error('Error al actualizar usuario:', error);
+            });
+        }
+    </script>
+</body>
+</html>
+
