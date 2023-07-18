@@ -5,7 +5,6 @@ import com.example.vaqui_jpa2.Repositorio.GeneralRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class ServicioGeneral {
@@ -15,8 +14,8 @@ public class ServicioGeneral {
         this.repository = repository;
     }
 
-    public List<General> listar(){
-        return repository.findAll();
+    public ArrayList<General> listar(){
+        return (ArrayList<General>) repository.findAll();
     }
 
     public General ultimoId(){

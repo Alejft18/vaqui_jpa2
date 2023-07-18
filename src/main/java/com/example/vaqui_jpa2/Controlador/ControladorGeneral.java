@@ -2,11 +2,9 @@ package com.example.vaqui_jpa2.Controlador;
 
 import com.example.vaqui_jpa2.Entidad.General;
 import com.example.vaqui_jpa2.Servicio.ServicioGeneral;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = {"GET", "POST", "PUT", "DELETE"})
@@ -19,10 +17,10 @@ public class ControladorGeneral {
     }
 
     @GetMapping("/listarGeneral")
-    public ResponseEntity<List<General>> listarGeneral(){
-        List<General> listaGeneral = servicio.listar();
-        return ResponseEntity.ok(listaGeneral);
+    public ArrayList<General> listarGeneral(){
+        return servicio.listar();
     }
+
     @GetMapping("/ultimoIdGeneral")
     public General ultimoId(){return servicio.ultimoId();}
 
