@@ -32,6 +32,7 @@ public class ControladorToro {
         return ResponseEntity.status(HttpStatus.OK)
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(json);
+
     }
 
     @PostMapping("/agregarToro/{id}")
