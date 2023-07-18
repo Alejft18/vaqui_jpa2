@@ -36,8 +36,8 @@ public class ServicioGestacion {
             int id = gestacion.getId_gestacion().getId();
             Double peso = gestacion.getPeso_kilos();
             LocalDate fechaInsemi = gestacion.getFecha_inseminacion();
-            LocalDate fechaAproxParto = gestacion.getFecha_aproxParto();
-            LocalDate fechaUltiParto = gestacion.getFecha_ultimoParto();
+            LocalDate fechaAproxParto = gestacion.getFecha_aprox_parto();
+            LocalDate fechaUltiParto = gestacion.getFecha_ultimo_parto();
             LocalDate fechaRevi = gestacion.getFecha_revision();
             String categoria = gestacion.getCategoria();
 
@@ -69,8 +69,8 @@ public class ServicioGestacion {
         if (genrepository.existsById(id) && general.getGenero().equals("hembra")){
             Double peso = gestacion.getPeso_kilos();
             LocalDate fechaInsemi = gestacion.getFecha_inseminacion();
-            LocalDate fechaAproxParto = gestacion.getFecha_aproxParto();
-            LocalDate fechaUltiParto = gestacion.getFecha_aproxParto();
+            LocalDate fechaAproxParto = gestacion.getFecha_aprox_parto();
+            LocalDate fechaUltiParto = gestacion.getFecha_ultimo_parto();
             LocalDate fechaRevi = gestacion.getFecha_revision();
             String categoria = gestacion.getCategoria();
 
@@ -108,9 +108,9 @@ public class ServicioGestacion {
 
         if (repository.existsById(codigo)){
             gesta.setFecha_revision(gestacion.getFecha_revision());
-            gesta.setFecha_aproxParto(gestacion.getFecha_aproxParto());
+            gesta.setFecha_aprox_parto(gestacion.getFecha_aprox_parto());
             gesta.setFecha_inseminacion(gestacion.getFecha_inseminacion());
-            gesta.setFecha_ultimoParto(gestacion.getFecha_ultimoParto());
+            gesta.setFecha_ultimo_parto(gestacion.getFecha_ultimo_parto());
             gesta.setPeso_kilos(gestacion.getPeso_kilos());
             repository.save(gesta);
 
