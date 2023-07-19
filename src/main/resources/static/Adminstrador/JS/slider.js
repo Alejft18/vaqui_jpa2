@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     function obtenerDatosBovinos() {
       $.ajax({
-        url: 'http://vaquijpa2-production.up.railway.app/cantidadBovinos',
+        url: 'https://vaquijpa2-production.up.railway.app/cantidadBovinos',
         type: "GET",
         success: function(respuesta) {
           $("#cantidadBovinos").text(respuesta + " Bovinos"); // Actualiza el valor del elemento <h4>
@@ -22,7 +22,7 @@ $(document).ready(function() {
 
     function obtenerDatosTerneros() {
       $.ajax({
-        url: 'http://vaquijpa2-production.up.railway.app/cantidadTerneros',
+        url: 'https://vaquijpa2-production.up.railway.app/cantidadTerneros',
         type: "GET",
         success: function(respuesta) {
           $("#cantidadTerneros").text(respuesta + " Terneros"); // Actualiza el valor del elemento <h4>

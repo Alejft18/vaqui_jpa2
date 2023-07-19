@@ -17,7 +17,7 @@ $("#agregar").on('click', function() {
     console.log(datosEnvio);
 
     $.ajax({
-        url: "http://vaquijpa2-production.up.railway.app/agregarGeneral",
+        url: 'https://vaquijpa2-production.up.railway.app/agregarGeneral',
         type: "POST",
         data: datosEnvio,
         contentType: "application/JSON",
@@ -56,7 +56,7 @@ $("#agregarLechera").on('click', function() {
     console.log(datosEnvio);
 
     $.ajax({
-        url: "http://vaquijpa2-production.up.railway.app/agregarLecheras/" + $('#id').val(),
+        url: 'https://vaquijpa2-production.up.railway.app/agregarLecheras/'+ $('#id').val(),
         type: "POST",
         data: datosEnvio,
         contentType: "application/json",
@@ -93,7 +93,7 @@ $("#agregarEngorde").on('click', function() {
     console.log(datosEnvio);
 
     $.ajax({
-        url: "http://vaquijpa2-production.up.railway.app/ingresarEngorde/" + $('#id').val(),
+        url: 'https://vaquijpa2-production.up.railway.app/ingresarEngorde/' + $('#id').val(),
         type: "POST",
         data: datosEnvio,
         contentType: "application/json",
@@ -128,7 +128,7 @@ $("#agregarTernero").on('click', function() {
     let datosEnvio = JSON.stringify(datos);
 
     $.ajax({
-        url: "http://vaquijpa2-production.up.railway.app/agregarTernero/" + $('#id').val() + "/" + $('#id_madre').val(),
+        url: 'https://vaquijpa2-production.up.railway.app/agregarTernero/' + $('#id').val() + '/' + $('#id_madre').val(),
         type: "POST",
         data: datosEnvio,
         contentType: "application/json",
@@ -167,7 +167,7 @@ $("#agregarGestacion").on('click', function() {
     console.log(datosEnvio);
 
     $.ajax({
-        url: "http://vaquijpa2-production.up.railway.app/agregarGestacion/" + $('#id').val(),
+        url: 'https://vaquijpa2-production.up.railway.app/agregarGestacion/' + $('#id').val(),
         type: "POST",
         data: datosEnvio,
         contentType: "application/json",
@@ -205,7 +205,7 @@ $("#agregarSecado").on('click', function() {
     console.log(datosEnvio);
 
     $.ajax({
-        url: "http://vaquijpa2-production.up.railway.app/agregarSecado/" + $('#id').val(),
+        url: 'https://vaquijpa2-production.up.railway.app/agregarSecado/' + $('#id').val(),
         type: "POST",
         data: datosEnvio,
         contentType: "application/json",
@@ -243,7 +243,7 @@ $("#agregarToro").on('click', function() {
     console.log(datosEnvio);
 
     $.ajax({
-        url: "http://vaquijpa2-production.up.railway.app/agregarToro/" + $('#id').val(),
+        url: 'https://vaquijpa2-production.up.railway.app/agregarToro/' + $('#id').val(),
         type: "POST",
         data: datosEnvio,
         contentType: "application/json",
@@ -282,7 +282,7 @@ $("#agregarToro").on('click', function() {
             console.log(datosEnvio);
 
             $.ajax({
-                url: "http://vaquijpa2-production.up.railway.app/agregarUsuario",
+                url: 'https://vaquijpa2-production.up.railway.app/agregarUsuario',
                 type: "POST",
                 data: datosEnvio,
                 contentType: "application/JSON",
@@ -303,7 +303,7 @@ $("#agregarToro").on('click', function() {
 
         //CARGAR EL ULTIMO ID
         $.ajax({
-            url: 'http://vaquijpa2-production.up.railway.app/ultimoIdGeneral',
+            url: 'https://vaquijpa2-production.up.railway.app/ultimoIdGeneral',
             type: 'GET',
             dataType: 'json',
             success: function(data) {
