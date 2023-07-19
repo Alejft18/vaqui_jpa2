@@ -78,7 +78,7 @@
     let datosEnvio = JSON.stringify(datos);
 
     $.ajax({
-        url: "http://localhost:8080/actualizarTernero/" + $('#id').val(),
+        url: 'https://vaquijpa2-production.up.railway.app/actualizarTernero/' + $('#id').val(),
         type: "PUT",
         data: datosEnvio,
         contentType: "application/json",
