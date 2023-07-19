@@ -21,7 +21,7 @@ $(document).ready(function() {
   // Realizar la petición AJAX para obtener todos los datos
   function obtenerDatos() {
     $.ajax({
-      url: "http://vaquijpa2-production.up.railway.app/listarSecado",
+      url: 'https://vaquijpa2-production.up.railway.app/listarSecado',
       type: "GET",
       dataType: "JSON",
       success: function(respuesta) {
@@ -76,7 +76,7 @@ $(document).ready(function() {
     
       if (confirm("¿Estás seguro de que deseas eliminar el bovino?")) {
         $.ajax({
-          url: "http://vaquijpa2-production.up.railway.app/eliminarSecado/" + id,
+          url: 'https://vaquijpa2-production.up.railway.app/eliminarSecado/' + id,
           type: "DELETE",
           dataType: "JSON",
           success: function(respuesta) {
