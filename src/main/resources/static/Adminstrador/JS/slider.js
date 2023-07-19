@@ -2,7 +2,7 @@
 $(document).ready(function() {
   function obtenerDatosPromedio() {
     $.ajax({
-      url: "http://vaquijpa2-production.up.railway.app/promedioLeche",
+      url: "https://vaquijpa2-production.up.railway.app/promedioLeche",
       type: "GET",
       success: function(respuesta) {
         $("#promedioLeche").text(respuesta + " Lt"); // Actualiza el valor del elemento <h4>
