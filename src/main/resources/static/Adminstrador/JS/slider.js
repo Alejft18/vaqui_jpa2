@@ -2,7 +2,7 @@
 $(document).ready(function() {
   function obtenerDatosPromedio() {
     $.ajax({
-      url: "http://localhost:8080/promedioLeche",
+      url: "http://vaquijpa2-production.up.railway.app/promedioLeche",
       type: "GET",
       success: function(respuesta) {
         $("#promedioLeche").text(respuesta + " Lt"); // Actualiza el valor del elemento <h4>
@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     function obtenerDatosBovinos() {
       $.ajax({
-        url: "http://localhost:8080/cantidadBovinos",
+        url: "http://vaquijpa2-production.up.railway.app/cantidadBovinos",
         type: "GET",
         success: function(respuesta) {
           $("#cantidadBovinos").text(respuesta + " Bovinos"); // Actualiza el valor del elemento <h4>
@@ -22,7 +22,7 @@ $(document).ready(function() {
 
     function obtenerDatosTerneros() {
       $.ajax({
-        url: "http://localhost:8080/cantidadTerneros",
+        url: "http://vaquijpa2-production.up.railway.app/cantidadTerneros",
         type: "GET",
         success: function(respuesta) {
           $("#cantidadTerneros").text(respuesta + " Terneros"); // Actualiza el valor del elemento <h4>
