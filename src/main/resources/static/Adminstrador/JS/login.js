@@ -34,7 +34,7 @@ function validarFormulario(event) {
         return;
     }
 
-    const url = `https://vaquijpa2-production.up.railway.app/buscarUsuario/${id}`;
+    const url = `http://vaquijpa2-production.up.railway.app/buscarUsuario/${id}`;
     fetch(url, {
         method: 'GET',
         headers: {
