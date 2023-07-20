@@ -31,6 +31,7 @@ public class ControladorGeneral {
                 .body(json);
     }
 
+
     @GetMapping("/ultimoIdGeneral")
     public General ultimoId(){return servicio.ultimoId();}
 

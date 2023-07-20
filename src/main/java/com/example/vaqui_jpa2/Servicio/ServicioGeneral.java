@@ -33,7 +33,6 @@ public class ServicioGeneral {
             String procedencia = general.getProcedencia();
             String imagen = general.getImagen();
 
-
             JSONObject jsonObject = new JSONObject();
             try {
                 jsonObject.put("id",id);
