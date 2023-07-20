@@ -139,6 +139,16 @@
 
 @media screen and (max-width: 768px){
 
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .vaqui a{
+        margin: 0;
+    }
+
     .categoria__text p{
         width: 300px;
     }

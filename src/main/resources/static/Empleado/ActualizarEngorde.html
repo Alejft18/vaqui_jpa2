@@ -73,7 +73,7 @@ $("#actualizarEngorde").on('click', function() {
     console.log(datosEnvio);
 
     $.ajax({
-        url: "http://localhost:8080/actualizarEngorde/" + $('#id').val(),
+        url: 'https://vaquijpa2-production.up.railway.app/actualizarEngorde/' + $('#id').val(),
         type: "PUT",
         data: datosEnvio,
         contentType: "application/json",

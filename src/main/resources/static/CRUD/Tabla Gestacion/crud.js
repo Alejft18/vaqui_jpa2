@@ -22,7 +22,7 @@ $(document).ready(function() {
   // Realizar la petición AJAX para obtener todos los datos
   function obtenerDatos() {
     $.ajax({
-      url: "http://localhost:8080/listarGestacion",
+      url: 'https://vaquijpa2-production.up.railway.app/listarGestacion',
       type: "GET",
       dataType: "JSON",
       success: function(respuesta) {
@@ -77,7 +77,7 @@ $(document).ready(function() {
     
       if (confirm("¿Estás seguro de que deseas eliminar el bovino?")) {
         $.ajax({
-          url: "http://localhost:8080/eliminarGestacion/" + id,
+          url: 'https://vaquijpa2-production.up.railway.app/eliminarGestacion/' + id,
           type: "DELETE",
           dataType: "JSON",
           success: function(respuesta) {

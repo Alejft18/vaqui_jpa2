@@ -20,7 +20,7 @@ $(document).ready(function() {
   // Realizar la petición AJAX para obtener todos los datos
   function obtenerDatos() {
     $.ajax({
-      url: "http://localhost:8080/listarEngorde",
+      url: 'https://vaquijpa2-production.up.railway.app/listarEngorde',
       type: "GET",
       dataType: "JSON",
       success: function(respuesta) {
@@ -74,7 +74,7 @@ $(document).ready(function() {
   
     if (confirm("¿Estás seguro de que deseas eliminar el bovino?")) {
       $.ajax({
-        url: "http://localhost:8080/eliminarEngorde/" + id,
+        url: 'https://vaquijpa2-production.up.railway.app/eliminarEngorde/' + id,
         type: "DELETE",
         dataType: "JSON",
         success: function(respuesta) {

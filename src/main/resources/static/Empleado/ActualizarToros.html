@@ -80,7 +80,7 @@
     console.log(datosEnvio);
 
     $.ajax({
-        url: "http://localhost:8080/actualizarToro/" + $('#id').val(),
+        url: 'https://vaquijpa2-production.up.railway.app/actualizarToro/' + $('#id').val(),
         type: "PUT",
         data: datosEnvio,
         contentType: "application/json",

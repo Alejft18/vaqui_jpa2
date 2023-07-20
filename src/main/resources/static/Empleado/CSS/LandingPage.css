@@ -447,7 +447,7 @@ nav ul li a:hover {
 @media (max-width:768px){
 
     header {
-        height: 500px;
+        height: 90vh;
     }
 
     nav {
@@ -498,7 +498,8 @@ nav ul li a:hover {
       }
 
       .header__slogan__images {
-        display: none;
+        height: 30%;
+        top: 580px;
       }
 
       .categoria__paragraph {
@@ -520,7 +521,7 @@ nav ul li a:hover {
     }
 
     .gestion__paragraph {
-        width: 400px;
+        width: 300px;
     }
 
     .gestion__container-card .card{

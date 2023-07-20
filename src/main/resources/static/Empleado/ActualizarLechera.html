@@ -92,7 +92,7 @@
     console.log(datosEnvio);
 
     $.ajax({
-        url: "http://localhost:8080/actualizarLechera/" + $('#id').val(),
+        url: 'https://vaquijpa2-production.up.railway.app/actualizarLechera/' + $('#id').val(),
         type: "PUT",
         data: datosEnvio,
         contentType: "application/json",

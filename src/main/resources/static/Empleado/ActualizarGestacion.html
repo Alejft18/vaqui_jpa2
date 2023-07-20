@@ -86,7 +86,7 @@ $("#actualizarGestacion").on('click', function() {
     console.log(datosEnvio);
 
     $.ajax({
-        url: "http://localhost:8080/actualizarGestacion/" + $('#id').val(),
+        url: 'https://vaquijpa2-production.up.railway.app/actualizarGestacion/' + $('#id').val(),
         type: "PUT",
         data: datosEnvio,
         contentType: "application/json",

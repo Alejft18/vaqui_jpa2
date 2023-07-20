@@ -34,7 +34,7 @@ function validarFormulario(event) {
         return;
     }
 
-    const url = `http://localhost:8080/buscarUsuario/${id}`;
+    const url = `https://vaquijpa2-production.up.railway.app/buscarUsuario/${id}`;
     fetch(url, {
         method: 'GET',
         headers: {
@@ -76,7 +76,7 @@ function validarFormulario(event) {
 
 // Función para cargar los datos del perfil del usuario
 function cargarPerfilUsuario(id) {
-    const url = `http://localhost:8080/buscarUsuario/${id}`;
+    const url = `https://vaquijpa2-production.up.railway.app/buscarUsuario/${id}`;
     fetch(url, {
         method: 'GET',
         headers: {

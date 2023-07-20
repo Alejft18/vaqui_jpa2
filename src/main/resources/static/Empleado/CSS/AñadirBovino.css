@@ -49,6 +49,7 @@ hr {
 form{
   background-color: #fff;
   margin:auto;
+  margin-bottom: 80px;
   width: 90%;
   max-width: 400px;
   padding: 2em 3em;

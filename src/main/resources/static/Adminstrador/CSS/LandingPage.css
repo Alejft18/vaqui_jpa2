@@ -721,7 +721,7 @@ nav ul li a:hover {
 @media (max-width:768px){
 
     header {
-        height: 500px;
+        height: 90vh;
     }
 
     nav {
@@ -764,7 +764,6 @@ nav ul li a:hover {
         display: block;
       }
       
-
       .header__slogan {
         text-align: center;
         margin: 30px 30px 0 30px;
@@ -772,7 +771,8 @@ nav ul li a:hover {
       }
 
       .header__slogan__images {
-        display: none;
+        height: 30%;
+        top: 580px;
       }
 
       .estadisticas {
@@ -780,7 +780,7 @@ nav ul li a:hover {
       }
 
       .estadisticas__paragraph{
-        width: 400px;
+        width: 300px;
       }
 
       .estadisticas__seccion {
@@ -796,12 +796,16 @@ nav ul li a:hover {
         align-items: center;
       }
 
+      .nosotros__title{
+        width: 400px;
+      }
+
       .nosotros img {
-        width: 200px;
+        width: 300px;
       }
 
       .nosotros__paragraph {
-        width: 400px;
+        width: 300px;
       }
 
       .nosotros__firtsArticle {
@@ -809,8 +813,16 @@ nav ul li a:hover {
         flex-direction: column-reverse;
       }
 
+      .firtsArticle__texto{
+        width: 300px;
+      }
+
       .nosotros__secondArticle{
         flex-direction: column;
+      }
+
+      .secondArticle__texto{
+        width: 300px ;
       }
 
       .categoria {
@@ -822,7 +834,7 @@ nav ul li a:hover {
     }
 
     .container {
-        margin-bottom: 50px;
+        margin: auto;
     }
 
     .slider__body{
@@ -840,8 +852,12 @@ nav ul li a:hover {
         height: 210px;
     }
 
+    .slider__texts .subtitle{
+      font-size: 30px;
+    }
+
     .gestion__paragraph {
-        width: 400px;
+        width: 300px;
     }
 
     .gestion__container-card .card{
@@ -865,5 +881,4 @@ nav ul li a:hover {
     .contactanos{
         width: 100%;
       }
-
 }
