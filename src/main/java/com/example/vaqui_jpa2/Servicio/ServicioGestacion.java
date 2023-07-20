@@ -48,8 +48,8 @@ public class ServicioGestacion {
                 jsonObject.put("id",id);
                 jsonObject.put("peso_kilos",peso);
                 jsonObject.put("fecha_inseminacion", fechaInsemi);
-                jsonObject.put("fecha_aproxParto",fechaAproxParto);
-                jsonObject.put("fecha_ultimoParto",fechaUltiParto);
+                jsonObject.put("fecha_aprox_parto",fechaAproxParto);
+                jsonObject.put("fecha_ultimo_parto",fechaUltiParto);
                 jsonObject.put("fecha_revision",fechaRevi);
                 jsonObject.put("categoria",categoria);
 
