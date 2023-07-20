@@ -2,6 +2,10 @@ package com.example.vaqui_jpa2.Controlador;
 
 import com.example.vaqui_jpa2.Entidad.General;
 import com.example.vaqui_jpa2.Servicio.ServicioGeneral;
+import org.json.JSONArray;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -16,9 +20,15 @@ public class ControladorGeneral {
         this.servicio = servicio;
     }
 
+
     @GetMapping("/listarGeneral")
-    public ArrayList<General> listarGeneral(){
-        return servicio.listar();
+    public ResponseEntity<String> listarGeneral(){
+        JSONArray jsonArray= servicio.listarGeneral();
+        String json= jsonArray.toString();
+
+        return ResponseEntity.status(HttpStatus.OK)
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(json);
     }
 
     @GetMapping("/ultimoIdGeneral")
