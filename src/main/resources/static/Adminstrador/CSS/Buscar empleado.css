@@ -155,6 +155,38 @@ table {
         width: 300px;
     }
 
-    
-
 }
+
+/* Ajustar el tamaño de fuente para que se adapte a pantallas más pequeñas */
+@media (max-width: 600px) {
+  table {
+      font-size: 12px;
+  }
+}
+
+/* Hacer que la tabla ocupe todo el ancho disponible en pantallas pequeñas */
+@media (max-width: 400px) {
+  table {
+      width: 100%;
+  }
+  table thead th {
+      display: none; /* Ocultar las cabeceras de las columnas en pantallas pequeñas */
+  }
+  table tbody td {
+      display: block; /* Mostrar las celdas de datos como bloques para que ocupen todo el ancho */
+      text-align: right; /* Alinear el texto a la derecha */
+      padding: 4px; /* Agregar un poco de espacio entre las celdas */
+  }
+  table tbody tr {
+      margin-bottom: 8px; /* Agregar margen inferior entre cada fila de datos */
+      border-bottom: 1px solid black; /* Agregar una línea separadora entre filas */
+  }
+  table tbody td::before {
+      /* Agregar etiquetas con los nombres de las columnas antes del contenido de las celdas */
+      content: attr(data-label);
+      display: inline-block;
+      font-weight: bold;
+      margin-right: 4px;
+  }
+}
+

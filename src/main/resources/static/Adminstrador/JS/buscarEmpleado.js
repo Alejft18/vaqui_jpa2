@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  
     // Función para crear las filas de datos
     function crearFilas(datos) {
         let tbody = $('#tabla tbody');
